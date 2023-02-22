@@ -1,38 +1,36 @@
-const objetos = [
-    {
-        manzanas: 3,
-        peras: 2,
-        carne: 1,
-        jugos: 5,
-        dulces: 2
-    },
-    {
-        manzanas: 1,
-        sandias: 1,
-        huevos: 6,
-        jugos: 1,
-        panes: 4
-    }
-]
 
-let newArray = [];
-let totalCantProductos = 0;
+var ProductManag = function() {
+    this.products = [];
+    this.addProduct = function(product) {
+      this.products.push(product);
+    };
+    this.getProducts = function() {
+      return this.products;
+    };
+  };
 
+  var productManag = new ProductManag();
+  console.log(productManag.getProducts());
 
-objetos.forEach(objeto => {
-    const keys = Object.keys(objeto);
+  var product = {
+    name: 'Apple',
+    price: '$2.99',
+    description: 'Este es un producto prueba'
+  };
+  productManag.addProduct(product);
+  /* title: “producto de prueba” */
+  /* description:”Este es un producto prueba” */
+  
+  /* price:200, */
+  
+  /* thumbnail:”Sin imagen” */
+  /* code:”abc123”, */
+  
+  /* Stock: 25 */
+  
 
-    keys.forEach(key => {
-        if (!newArray.includes(key)) newArray.push(key);
-    })
+  console.log(productManag.getProducts());
 
-    let soloValores = Object.values(objeto)
- 
-    let totalProductos = soloValores.reduce((Acc, Ini) => {
-        return Acc + Ini
-    })
-    totalCantProductos += totalProductos;
-})
-
-console.log(newArray);
-console.log(totalCantProductos)
+  console.log(productManag.getProducts());
+  
+  productManag.addProduct(product);
