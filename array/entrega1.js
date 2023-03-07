@@ -33,7 +33,7 @@ class ProductManager {
     }
   }
   
-  // Crear una instancia de la clase ProductManager
+  // Crear  la clase ProductManager
   const manager = new ProductManager();
   
   // Llamar al método getProducts recién creada la instancia, debe devolver un arreglo vacío []
